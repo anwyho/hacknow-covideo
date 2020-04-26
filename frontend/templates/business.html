@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.myLink {display: none}
+</style>
+<title>Covideo</title>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="/" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-coffee w3-margin-right"></i>Covideo</b></a>
+  <a class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" style="width:auto; right:0" onclick="openNav()"><i class="fa fa-bars"></i></a>
+</div>
+
+<nav class="w3-sidebar w3-light-grey w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-light-grey w3-hover-red w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="/" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Home</a>
+    <a href="businessSubmit" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Submit a Business</a>
+    <a href="aboutUs" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">About Us</a>
+  </div>
+</nav>
+
+<!-- Page Content -->
+<div class="w3-row">
+  <div class="w3-third w3-container">
+  </div>
+  <div class="w3-third w3-light-grey w3-container w3-left" style="height:700px">
+    <div class="w3-padding-64 w3-center">
+      <h1><b>{{tesp_dict["business_name"]}}</b></h1>
+    </div>
+    <div class="w3-padding-16">
+      <h3>Address: {{tesp_dict["location"]["address1"]}}, {{tesp_dict["location"]["city"]}}</h3>
+      <p><b>Phone #:</b> ({{tesp_dict["phone"][2:5]}}) {{tesp_dict["phone"][5:8]}}-{{tesp_dict["phone"][8:13]}}</p>
+      <p><b>Hours:</b> *May not be accurate*</p>
+      <ul style="list-style-type:none;">
+        <li><b>Monday</b> {{tesp_dict["hours"][0]["open"][0]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][0]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][0]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][0]["end"][2:4]}} pm</li>
+        <li><b>Tuesday</b> {{tesp_dict["hours"][0]["open"][1]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][1]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][1]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][1]["end"][2:4]}} pm</li>
+        <li><b>Wednesday</b> {{tesp_dict["hours"][0]["open"][2]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][2]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][2]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][2]["end"][2:4]}} pm</li>
+        <li><b>Thursday</b> {{tesp_dict["hours"][0]["open"][3]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][3]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][3]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][3]["end"][2:4]}} pm</li>
+        <li><b>Friday</b> {{tesp_dict["hours"][0]["open"][4]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][4]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][4]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][4]["end"][2:4]}} pm</li>
+        <li><b>Saturday</b> {{tesp_dict["hours"][0]["open"][5]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][5]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][5]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][5]["end"][2:4]}} pm</li>
+        <li><b>Sunday</b> {{tesp_dict["hours"][0]["open"][6]["start"][0:2]}}:{{tesp_dict["hours"][0]["open"][6]["start"][2:4]}} am - {{tesp_dict["hours"][0]["open"][6]["end"][0:2]}}:{{tesp_dict["hours"][0]["open"][6]["end"][2:4]}} pm</li>
+      </ul>
+      <p><a href="/businessSubmit" class="w3-hover-text-red">Do the operation hours look wrong? Help us fix them.</a></p>
+    </div>
+  </div>
+</div>
+<div class="w3-row">
+  <div class="w3-third w3-container">
+  </div>
+  <div class="w3-third w3-container w3-center">
+    <video width="600" controls>
+      <source src="/static/videos/ripoffchungus.mp4" type="video/mp4">
+      Your browser does not support Rip Off Chungus.
+    </video>
+  </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Connect With Us</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-paypal w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-weibo w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.youtube.com/watch?v=91g7b47zbVU" target="_blank" class="w3-hover-text-green">friendship and magic</a></p>
+</footer>
+
+<script>
+  function openNav() {
+    var ele = document.getElementById("mySidebar");
+    ele.style.width = "100%";
+    ele.style.display = "block";
+
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+
+</script>
+
+</body>
+</html>

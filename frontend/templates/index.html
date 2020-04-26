@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Covideo</title>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.myLink {display: none}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="/" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-coffee w3-margin-right"></i>Covideo</b></a>
+  <a class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" style="width:auto; right:0" onclick="openNav()"><i class="fa fa-bars"></i></a>
+</div>
+
+<nav class="w3-sidebar w3-light-grey w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-light-grey w3-hover-red w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="/" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Home</a>
+    <a href="businessSubmit" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Submit a Business</a>
+    <a href="aboutUs" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">About Us</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-hide-small" style="max=-width:1500px">
+  <img class="w3-image" src="/static/w3images/london2.jpg" alt="London" width="1500" height="700">
+  <div class="w3-display-middle" style="width:65%">
+    <div class="w3-bar w3-black">
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Hotel');"><i class="fa fa-cutlery w3-margin-right"></i>Name</button>
+      <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Flight');"><i class="fa fa-map-marker w3-margin-right"></i>Location</button>
+      <!--<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Car');"><i class="fa fa-car w3-margin-right"></i>Rental</button> -->
+    </div>
+
+    <!-- Tabs -->
+    <div id="Hotel" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Support your local businesses</h3>
+      <p>Have a favorite place? Search for it here.</p>
+      <form name="myform" action="/search" method="get">
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+          <input class="w3-input w3-border" type="text"
+          name="q" placeholder="Maccie Cheesie">
+        </div>
+      </div>
+      <p><button class="w3-button w3-dark-grey" >Search for business</button></p>
+      </form>
+    </div>
+
+    <div id="Flight" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Support your local businesses</h3>
+      <p>Look for restaurants near you.</p>
+      <form name="myform" action="/search" method="get">
+      <div class="w3-row-padding" style="margin:0 -16px;">
+        <div class="w3-half">
+            <input class="w3-input w3-border" type="text" 
+            name="location" placeholder="ZIP code">
+        </div>
+      </div>
+      <p><button class="w3-button w3-dark-grey" >Search around me</button></p>
+      </form>
+    </div>
+
+    <!--
+    <div id="Car" class="w3-container w3-white w3-padding-16 myLink">
+      <h3>Best car rental in the world!</h3>
+      <p><span class="w3-tag w3-deep-orange">DISCOUNT!</span> Special offer if you book today: 25% off anywhere in the world with CarServiceRentalRUs</p>
+      <input class="w3-input w3-border" type="text" placeholder="Pick-up point">
+      <p><button class="w3-button w3-dark-grey">Search Availability</button></p>
+    </div> -->
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px;">
+
+
+  <!-- Contact -->
+  <div class="w3-container">
+    <h2>Contact Us</h2>
+    <p>Have a Question? Fill out the form below.</p>
+    <i class="fa fa-map-marker" style="width:30px"></i> Castro Valley, CA<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +00 151515<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: mail@mail.com<br>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message"></p>
+      <p><button class="w3-button w3-black w3-padding-large" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+  
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Connect With Us</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-paypal w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-weibo w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.youtube.com/watch?v=91g7b47zbVU" target="_blank" class="w3-hover-text-green">friendship and magic</a></p>
+</footer>
+
+<script>
+// Tabs
+function openLink(evt, linkName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("myLink");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(linkName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+
+// Click on the first tablink on load
+document.getElementsByClassName("tablink")[0].click();
+
+// User input
+// function getLocation(form) {
+//   var inputVar = form.inputBox.value;
+//   alert(inputVar);
+//   var encodedURL = encodeURIComponent(inputVar);
+//   fetch("https://hacknow-backend.anwyho.repl.co/businesses/search?location=" + encodedURL)
+//     .then((response) => {
+//       return response.json();
+//     })
+//     .catch((error) =>{
+//       console.error('Error:', error);
+//     });
+// }
+
+// function getBusinessName(form) {
+//   var inputVar = encodeURIComponent(form.inputBox.value);
+//   var encodedURL = "search?q=" + inputVar;
+//   alert(encodedURL);
+
+//   location.href = encodedURL;
+
+
+  // fetch(encodedURL)
+  //   .then((response) => {==
+  //     return response.json();
+  //   })
+  //   .catch((error) =>{
+  //     console.error('Error:', error);
+  //   });
+// }
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "100%";
+  document.getElementById("mySidebar").style.display = "block";
+}
+function closeNav() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>

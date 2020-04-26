@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Covideo</title>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.myLink {display: none}
+</style>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="/" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-coffee w3-margin-right"></i>Covideo</b></a>
+  <a class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" style="width:auto; right:0" onclick="openNav()"><i class="fa fa-bars"></i></a>
+</div>
+
+<nav class="w3-sidebar w3-light-grey w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-light-grey w3-hover-red w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="/" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Home</a>
+    <a href="businessSubmit" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Submit a Business</a>
+    <a href="aboutUs" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">About Us</a>
+  </div>
+</nav>
+
+
+<!-- Search Results -->
+<div class="w3-container">
+  <h2>Search Results</h2>
+
+  <table class="w3-table-all w3-hoverable">
+    <thead>
+      <tr class="w3-light-grey">
+        <th>Business Name</th>
+        <th></th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tr>
+        <td><a href="business/" + {{wesp_dict["alias"]}}>{{wesp_dict["business_name"]}}</a></td>
+        <td></td>
+        <td><a href="business/" + {{wesp_dict["alias"]}}>{{wesp_dict["location"]["city"]}}</a></td>
+    </tr>
+    <tr>
+        <td><a href="business/" + {{mesp_dict["alias"]}}>{{mesp_dict["business_name"]}}</a></td>
+        <td></td>
+        <td><a href="business/" + {{mesp_dict["alias"]}}>{{mesp_dict["location"]["city"]}}</a></td>
+    </tr>
+    <tr>
+        <td><a href="business/" + {{kesp_dict["alias"]}}>{{kesp_dict["business_name"]}}</a></td>
+        <td></td>
+        <td><a href="business/" + {{kesp_dict["alias"]}}>{{kesp_dict["location"]["city"]}}</a></td>
+    </tr>
+    <tr>
+        <td><a href="business/" + {{aesp_dict["alias"]}}>{{aesp_dict["business_name"]}}</a></td>
+        <td></td>
+        <td><a href="business/" + {{aesp_dict["alias"]}}>{{aesp_dict["location"]["city"]}}</a></td>
+    </tr>
+    <tr>
+        <td><a href="business/" + {{Leonardo_dict["alias"]}}>{{Leonardo_dict["business_name"]}}</a></td>
+        <td></td>
+        <td><a href="business/" + {{Leonardo_dict["alias"]}}>{{Leonardo_dict["location"]["city"]}}</a></td>
+    </tr>
+  </table>
+</div>
+
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "100%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+    function closeNav() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

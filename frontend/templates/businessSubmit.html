@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.myLink {display: none}
+</style>
+<title>Covideo</title>
+<body class="w3-light-grey">
+
+<!-- Navigation Bar -->
+<div class="w3-bar w3-white w3-border-bottom w3-xlarge">
+  <a href="/" class="w3-bar-item w3-button w3-text-red w3-hover-red"><b><i class="fa fa-coffee w3-margin-right"></i>Covideo</b></a>
+  <a class="w3-bar-item w3-button w3-right w3-hover-red w3-text-grey" style="width:auto; right:0" onclick="openNav()"><i class="fa fa-bars"></i></a>
+</div>
+
+<nav class="w3-sidebar w3-light-grey w3-animate-right w3-xxlarge" style="display:none;padding-top:150px;right:0;z-index:2" id="mySidebar">
+  <a href="javascript:void(0)" onclick="closeNav()" class="w3-button w3-light-grey w3-hover-red w3-xxxlarge w3-display-topright" style="padding:0 12px;">
+    <i class="fa fa-remove"></i>
+  </a>
+  <div class="w3-bar-block w3-center">
+    <a href="/" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Home</a>
+    <a href="businessSubmit" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">Submit a Business</a>
+    <a href="aboutUs" class="w3-bar-item w3-button w3-text-black w3-hover-red" onclick="closeNav()">About Us</a>
+  </div>
+</nav>
+
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px;">
+
+  <!-- Contact -->
+  <div class="w3-container">
+    <h2>How you can help us.</h2>
+    <p>Encourage your local businesses to fill out the form below to be added to our database</p>
+    <form action="/action_page.php" target="_blank">
+      <p><label for="name">Business Name:</label><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Business Name" required name="Business Name"></p>
+      <p><label for="name">Contact Email:</label><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Contact Email" required name="Contact Email"></p>
+      <p><label for="name">Phone Number:</label><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Phone Number" required name="Message"></p>
+      <p><input type="file" class="form-control" id="image" name="image" required></p>
+      <p><button type="submit" class="btn btn-lg btn-success pull-right" id="btnContactUs">SEND MESSAGE</button></p>
+    </form>
+  </div>
+<!-- End page content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-center w3-opacity w3-margin-bottom">
+  <h5>Connect With Us</h5>
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-paypal w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-weibo w3-hover-opacity"></i>
+  </div>
+  <p>Powered by <a href="https://www.youtube.com/watch?v=91g7b47zbVU" target="_blank" class="w3-hover-text-green">friendship and magic</a></p>
+</footer>
+
+<script>
+  function openNav() {
+    document.getElementById("mySidebar").style.width = "100%";
+    document.getElementById("mySidebar").style.display = "block";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidebar").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
