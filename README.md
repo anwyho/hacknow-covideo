@@ -24,6 +24,7 @@ We ended up choosing the latter, and Covideo was born. (The name is a work in pr
 # The Product
 
 ![landing page](static/landing-page.jpg)
+
 This is what our landing page looks like.
 
 The vision of Covideo is is twofold - firstly, to give small, local businesses a place to show a bit of their personality whether it be through a quick bit of text, some photos, a video, even an audio message. This provides customers with a bit more of an intimate connection rather than purely an online storefront. Secondly, Covideo gives business owners or customers a place to update hours and transaction methods (e.g. delivery, pickup, takeout) in real time.
@@ -55,7 +56,9 @@ We ended up developing on the following stack:
     - repl.it
         - repl.it provides live coding in the same repls.
 
-![repl.it was SUPER helpful.](static/repl-it-backend.png)
+![repl.it backend code](static/repl-it-backend.png)
+
+repl.it was SUPER helpful.
 
 ## The Process
 
@@ -81,15 +84,18 @@ Bit by bit, my friend and I built up the business search feature, first by imple
 I didn't do a whole lot of work on the front-end, but I do have screenshots of it. It was written on another repl.it by my brother and his friend from high school. They're both learning CS in school, and are about second-years. Neither of them have touched web dev before this week, and they did an awesome job figuring out how to connect templates to application logic. Every so often, I'd check in, help make design decisions, and try to unblock. Here's what it ended up looking like:
 
 ![search results page](static/search.jpg)
+
 This is how the search results were shown.
 
 ![business registration page](static/business-registration.png)
+
 We had a page where businesses could register. People could also fill this out to recommend we connect with a local business.
 
 ![Fire Wings business page](static/business.jpg)
+
 Here's an example of a page a business would be able to customize.
 
-## The Lerns
+## The Lernes
 
 There we go. This was designing a simple web app from front to back. I think I understand frameworks like Gatsby or Django a lot more now, seeing what trade-offs they make where.
 
@@ -98,3 +104,6 @@ Technically, my next step will be to dive into React.js and Gatsby alongside CSS
 In terms of mentoring, I really enjoyed the project management side of coding. It was satisfying seeing the product improve incrementally by the work of tasks being delegated.
 
 This was such a good first-hackathon experience. I will definitely be doing more!
+
+As Chaucer famously said, 
+> The lyf so short, the craft so longe to lerne.
